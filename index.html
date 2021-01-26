@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AmarHisab.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
     
+    <div id="login-area">
+        <h1 class="text-center">Welcome to AmarHisab.Com</h1>
+        <div class="submit-area mt-5 shadow-lg p-3 mb-5 bg-white rounded">
+        <h4>Login</h4>
+        <input class="form-control" type="text" placeholder="Email"><br>
+        <input class="form-control" type="password" name="" id="" placeholder="Password"><br>
+        <button id="login" class="btn btn-success" type="submit">Enter</button>
+    </div>
+    </div>
+    <div id="transaction-area">
+        <h1>Transaction</h1>
+        <div class="row">
+            <div class="col-sm-12 col-md-4  ">
+                <div class="status deposit">
+                <h4>Deposit</h4>
+                <h2>$00</h2>
+            </div>
+            </div>
+            <div class="col-sm-12 col-md-4 ">
+                <div class="status withdraw">
+                <h4>Withdraw</h4>
+                <h2>$00</h2>
+            </div>
+            </div>
+            <div class="col-sm-12 col-md-4 ">
+                <div class="status balance">
+                <h4>Balance</h4>
+                <h2>$00</h2>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginbtn= document.getElementById('login');
+        loginbtn.addEventListener('click', function(){
+            const loginarea = document.getElementById('login-area');
+            loginarea.style.display='none';
+            const trans = document.getElementById('transaction-area');
+            trans.style.display = 'block';
+        })
+
+    </script>
 </body>
 </html>
